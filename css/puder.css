@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Her ses redigeringen af header før navigationsbarren*/
+html, body {
+    height: 100%;
+}
+
+:root {
+    --overskrift: #534741;
+    --hover: #333;
+    --footer: #82756B;
+    --baggrund: #eae5df;
+}
+
+h1 a {
+    font-size: 7.5rem;
+    font-family: serif;
+    color: var(--overskrift);
+    text-align: center;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 7.5rem;
+    font-family: serif;
+    color: var(--overskrift);
+    text-align: center;
+    font-weight: 100;
+}
+
+.oeverst {
+    background-color: #eae5df;
+    padding: 1.25rem;
+
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: var(--footer);
+   text-align: center;
+   font-style: italic;
+    margin-top: -1.5rem;
+    position: relative;
+    left: 7.8rem;
+    margin-bottom: 1.25rem;
+    font-family: bodoni, serif;
+}
+
+header {
+    position: relative; /* Sikrer, at menuen kan placeres korrekt */
+}
+
+header .main-nav {
+    font-family: bodoni, serif;
+    background-color: rgba(171, 159, 143, 0.7); /* Baggrundsfarve for navigationsmenu */
+    width: 100%; /* Fylder hele bredden */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+   
+}
+
+header .main-nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: space-around; 
+}
+
+header .main-nav ul li {
+    position: relative; 
+}
+
+header .main-nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+header .main-nav ul li {
+    position: relative;
+    float: left;
+}
+
+header .main-nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1.1rem;
+    color: var(--hover);
+    display: block;
+    padding: 10px 20px; 
+    line-height: 1.5; 
+    width: 21.8rem;
+    text-align: center;
+    background: transparent;
+}
+
+header .main-nav ul li a:hover { 
+    background: var(--hover);
+    color: #eee;
+}
+
+.nav-1 {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem;
+    font-family: bodoni, serif;
+}
+
+.nav-1 li {
+    display: inline-block;
+    margin-right: 0.3px;
+    
+}
+
+.nav-1 li a {
+text-decoration: none;
+color: var(--overskrift);
+}
+
+#Tips {
+    color: #eee;
+    background: var(--hover);
+    
+}
+
+
+header .main-nav ul li ul {
+    position:absolute;
+    left: 0;
+    width: 21.8rem;
+    background: var(--baggrund);
+    display: none; 
+    z-index: 1000;
+}
+
+
+header .main-nav ul li ul li {
+    margin: 0;       
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    height: auto;
+
+}
+
+header .main-nav ul li ul li ul li:hover {
+    background: var(--hover);
+    color: #eee;
+    z-index: 10;
+}
+
+
+header .main-nav ul li ul li ul li {
+    background:rgba(250, 245, 239);;
+    color: var(--hover);
+    z-index: 10;
+}
+
+
+
+
+header .main-nav ul li:focus-within > ul, 
+header .main-nav ul li:hover > ul {
+display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.25rem;
+    color: var(--hover);
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:991px){
+
+    header {
+            padding: 1.25rem;
+        }
+        
+    header label {
+        display: block;
+    }
+    
+    header .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    header .main-nav ul {
+        flex-direction: column; 
+    }
+
+    header .main-nav ul li {
+        width: 100%;
+    }
+    
+    header .main-nav ul li ul {
+        position: relative;  
+        width: 100%;       
+        left: 0;           
+        top: 0;              
+        display: none;  
+    }
+    
+    header .main-nav ul li ul li a {
+        background: #eee ;
+        display: block;       
+        padding: 10px 20px;
+        line-height: 1.5;   
+        background: none;
+       
+    }
+
+    header .main-nav ul li:focus-within > ul,
+    header .main-nav ul li:hover > ul {
+        display: block;
+
+    }
+    
+    header .main-nav ul li ul li ul {
+        left: 0;            
+        top: 0;
+    }
+    
+    #menu-bar:checked~ .main-nav {
+        display: block;
+    }
+    
+    }
+
+.diy-pude {
+    background-color: var(--baggrund);
+
+}
+
+.diy-pude h2 {
+    color: var(--baggrund);
+    margin-top: -2.3rem;
+    text-align: center;
+}
+
+#diylogo {
+    background-color: #a0958c;
+    color: var(--overskrift);
+    display: inline-block;
+    padding: 5px; 
+    margin-left: 42rem;
+    
+}
+
+
+h3 {
+    font-family: bodoni, serif;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--overskrift);
+}
+
+h4 {
+    
+    font-family: bodoni, serif;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    font-weight: 100;
+    color: var(--footer);
+    margin-bottom: 1rem;
+    
+}
+
+.overskrift {
+    font-size: 1.25rem;
+    color: var(--footer);
+   text-align: start;
+   font-style: italic;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: bodoni, serif;
+    list-style: none;
+    margin-left: -1rem;
+}
+
+.Opskriften {
+    margin-left: 24.5rem;
+    margin-bottom: 2rem;
+   
+}
+
+.linjen {
+    color: white;
+    border-bottom: 1px solid var(--footer);
+    margin-left: -1.5rem;
+    list-style: none;
+}
+
+#tekst {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 100;
+    color: var(--overskrift);
+    margin: 1rem;
+    margin-left: 15rem;
+    margin-right: 30rem;
+    text-align:left;
+    text-decoration: none;
+}
+
+.artikel-diy {
+    display: flex;              
+    justify-content: center;   
+    align-items: center;        
+}
+
+.artikel-diy img {
+    display: block; 
+    max-width: 50%; 
+    height: auto;
+    border: 2px solid var(--footer);
+    margin: 0 auto;
+
+}
+
+p {
+    margin-left: 28em;
+    margin-right: 28rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+#haekling {
+    font-family: bodoni, serif;
+    font-size: 1.5rem;
+    text-align: start;
+    margin-left: 28rem;
+}
+
+
+#opskrift {
+   text-align: center;
+    font-family: bodoni, serif;
+    font-size: 2.5rem;
+    margin-bottom: -2rem;
+   
+}
+
+.rubrik-guide {
+    text-align: start;
+    font-family: bodoni, serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -1.5rem;
+    font-weight: 600;
+ }
+
+
+ #tekst2 {
+        margin-left: 22.7rem;
+        margin-right: 19.2rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid var(--footer);
+        padding-bottom: 2rem;
+        line-height: 1.5rem;
+    
+ }
+
+.puder-img {
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 3rem;
+}
+
+
+
+.puder-img img {
+    display: inline-block;
+    max-width: 40%; 
+    text-align: center; 
+    margin: 0; 
+    width: 25%; 
+    height: auto; 
+    border: 2px solid var(--footer);
+}
+
+#pude1 {
+    margin-left: 22rem;
+    height: 25rem;
+   
+}
+
+#trinfortrin {
+    margin-right: 20rem;
+    height: 25rem;
+    line-height: 1.5rem;
+}
+
+.opskriftsguide h5 {
+    text-align: start;
+    font-family: bodoni, serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -9.1rem;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.2rem;
+
+}
+
+.opskriftsguide {
+    margin-right: 20rem;
+    line-height: 1.5rem;
+}
+
+
+#tekst1 {
+    color: var(--baggrund);
+    background-color: var(--baggrund);
+}
+
+footer {
+    background-color: var(--footer);
+    border-top: 1.5px solid var(--overskrift); 
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;      
+    padding: 0 20px;          
+    height: 6.25rem; 
+}
+
+.logo {
+    width: 6.25rem; 
+    height: auto;
+}
+
+.instalogo {
+    width: 5rem; 
+    height: auto;
+    margin: 0 auto;
+    margin-left: 65.6rem;
+}
+
+.fblogo {
+    width: 5.9rem; 
+    height: auto;
+    margin: 0;
+    
+}
+
+.maillogo {
+    width: 5.9rem;
+    height: auto;
+}

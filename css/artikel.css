@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Her ses redigeringen af header før navigationsbarren*/
+html, body {
+    height: 100%;
+}
+
+:root {
+    --overskrift: #534741;
+    --hover: #333;
+    --footer: #82756B;
+    --baggrund: #eae5df;
+}
+
+h1 a {
+    font-size: 7.5rem;
+    font-family: serif;
+    color: var(--overskrift);
+    text-align: center;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 7.5rem;
+    font-family: serif;
+    color: var(--overskrift);
+    text-align: center;
+    font-weight: 100;
+}
+
+.oeverst {
+    background-color: var(--baggrund);
+    padding: 1.25rem;
+
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: var(--footer);
+   text-align: center;
+   font-style: italic;
+    margin-top: -1.5rem;
+    position: relative;
+    left: 7.8rem;
+    margin-bottom: 1.25rem;
+    font-family: bodoni, serif;
+}
+
+header {
+    position: relative; /* Sikrer, at menuen kan placeres korrekt */
+}
+
+header .main-nav {
+    font-family: bodoni, serif;
+    background-color: rgba(171, 159, 143, 0.7); /* Baggrundsfarve for navigationsmenu */
+    width: 100%; /* Fylder hele bredden */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional skygge */
+   
+}
+
+header .main-nav ul {
+    list-style: none;
+    padding: 0; /* Fjerner standard padding */
+    margin: 0; /* Fjerner standard margin */
+    display: flex; /* Brug flexbox for at fordele menuen jævnt */
+    justify-content: space-around; /* Fordeler menupunkterne ligeligt */
+}
+
+header .main-nav ul li {
+    position: relative; /* Bevarer den relative position for dropdown-menuer */
+}
+
+header .main-nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+header .main-nav ul li {
+    position: relative;
+    float: left;
+}
+
+header .main-nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1.1rem;
+    color: rgb(43, 8, 8);
+    display: block;
+    padding: 10px 20px; /* Mindre padding */
+    line-height: 1.5; 
+    width: 21.8rem;
+    text-align: center;
+    background: transparent;
+}
+
+header .main-nav ul li a:hover { /* når du holder musen over et element */
+    background: #333;
+    color: #eee;
+}
+
+.nav-1 {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem;
+    font-family: bodoni, serif;
+}
+
+.nav-1 li {
+    display: inline-block;
+    margin-right: 0.3px;
+    
+}
+
+.nav-1 li a {
+text-decoration: none;
+color: var(--overskrift);
+}
+
+#Rum {
+    background: #333;
+    color: #eee;
+}
+
+header .main-nav ul li ul {
+    position:absolute;
+    left: 0;
+    width: 21.8rem;
+    background: var(--baggrund);
+    display: none; /*dette gør at den forsviner, man kan ikke se det på hjemmesiden */
+    z-index: 1000;
+}
+
+
+header .main-nav ul li ul li {
+    margin: 0;       
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    height: auto;
+
+}
+
+header .main-nav ul li ul li ul li:hover {
+    background: var(--hover);
+    color: #eee;
+    z-index: 10;
+}
+
+
+header .main-nav ul li ul li ul li {
+    background:rgba(250, 245, 239);;
+    color: var(--hover);
+    z-index: 10;
+}
+
+
+/*herunder kan man se at jeg har skrevet ul, og skrevet en ny, så komma betyder at man vil style flere ting på samme tid*/
+
+header .main-nav ul li:focus-within > ul, 
+header .main-nav ul li:hover > ul {
+display: block;
+}
+
+#menu-bar {
+    display: none; /*display none fjerner noget så vi ikke kan se det, der var en lille checkbox, men er der ikke længere*/
+}
+
+header label {
+    font-size: 1.25rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    header {
+            padding: 1.25rem;
+        }
+        
+    header label {
+        display: block;
+    }
+    
+    header .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    header .main-nav ul {
+        flex-direction: column; 
+    }
+
+    header .main-nav ul li {
+        width: 100%;
+    }
+    
+    header .main-nav ul li ul {
+        position: relative;  
+        width: 100%;       
+        left: 0;           
+        top: 0;              
+        display: none;  
+    }
+    
+    header .main-nav ul li ul li a {
+        background: #eee ;
+        display: block;       
+        padding: 10px 20px;
+        line-height: 1.5;   
+        background: none;
+       
+    }
+
+    header .main-nav ul li:focus-within > ul,
+    header .main-nav ul li:hover > ul {
+        display: block;
+
+    }
+    
+    header .main-nav ul li ul li ul {
+        left: 0;            
+        top: 0;
+    }
+    
+    #menu-bar:checked~ .main-nav {
+        display: block;
+    }
+    
+    }
+
+.flot-stueindretning {
+    background-color: var(--baggrund);
+
+}
+
+/*Her ses css redigering af forsiden*/
+.flot-stueindretning h2 {
+    color: var(--baggrund);
+    margin-top: -2.3rem;
+    text-align: center;
+}
+
+#stuelogo {
+    background-color: #a0958c;
+    color: var(--overskrift);
+    display: inline-block;
+    padding: 5px; /* Tilføjer lidt afstand mellem teksten og kanten af baggrunden */
+    margin-left: 42rem;
+    
+}
+
+
+h3 {
+    font-family: bodoni, serif;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--overskrift);
+}
+
+h4 {
+    
+    font-family: bodoni, serif;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    font-weight: 100;
+    color: var(--footer);
+    margin-bottom: 1rem;
+    
+}
+
+
+.forside-artikel1 {
+    display: flex;             
+    justify-content: center;    
+    align-items: center;        
+}
+
+.forside-artikel1 img {
+    display: block; 
+    max-width: 50%; 
+    height: auto;
+    border: 2px solid var(--footer);
+    margin: 0 auto;
+
+}
+
+p {
+    margin-left: 22.7rem;
+    margin-right: 22.7rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+#underrubrik1 {
+    margin-right: 7rem;
+    font-family: bodoni, serif;
+    font-size: 1.5rem;
+}
+
+
+/*Css redigering af sovesofa med stil og komfort*/
+
+#underrubrik2 {
+   text-align: start;
+   margin-left: 23rem;
+    font-family: bodoni, serif;
+    font-size: 2.5rem;
+    margin-bottom: -2rem;
+   
+}
+
+#underrubrik3 {
+    text-align: end;
+     font-family: bodoni, serif;
+     font-size: 2.5rem;
+     margin-top: 0.5rem;
+     margin-right: 21rem;
+     margin-bottom: 1rem;
+ }
+
+ #tekst2 {
+        margin-left: 22.7rem;
+        margin-right: 19.2rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid var(--footer);
+        padding-bottom: 2rem;
+        
+    
+ }
+
+.sovesofa-img {
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 3rem;
+}
+
+
+
+.sovesofa-img img {
+    display: inline-block;
+    max-width: 40%; 
+    text-align: center;
+    margin: 0; 
+    width: 25%; 
+    height: auto; 
+    border: 2px solid var(--footer);
+}
+
+#sovesofa1 {
+    margin-left: 22rem;
+   
+}
+
+#sovesofa2 {
+    margin-right: 20rem;
+    
+}
+
+/*Selve produkt samt produktteksterne til sovesofa*/
+#produkt-img-sofa {
+    width: 40%;
+    height: auto;
+    margin-left: 20rem;
+}
+
+.produkt-tekst1 p {
+    margin-bottom: -0.35rem;
+}
+
+.produkt-tekst1 p a {
+    color: #82756B;
+}
+
+
+.produkt-tekst1 {
+    margin-bottom: 10rem;
+}
+
+#produkt-img-sofagraa {
+    width: 40%;
+    height: auto;
+    margin-left: 35rem;
+}
+
+.produkt-tekst2 {
+    margin-bottom: 5rem;
+}
+
+.produkt-tekst2 p {
+    margin-left: 45rem;
+    margin-right: 25rem;
+    margin-bottom: -0.35rem;
+}
+
+.produkt-tekst2 p a {
+    color: #82756B;
+}
+
+
+#Minimalistisk {
+    margin-left: 25rem;
+    margin-bottom: 3rem;
+}
+
+#Minimalistisk a {
+    color: var(--footer);
+}
+
+
+/*Css redigering af dekoration*/
+
+.Dekoration {
+    background-color: var(--baggrund);
+}
+
+h2 {
+    color: var(--baggrund);
+}
+
+#underrubrik4 {
+    text-align: center;
+     font-family: bodoni, serif;
+     font-size: 2.5rem;
+     margin-top: 0.5rem;
+     margin-bottom: 1rem;
+ }
+
+#storvase {
+    width: 30rem;
+    margin-left: 30rem;
+    border: 2px solid var(--overskrift);
+}
+
+
+#dekoration-tekst {
+    margin-left: 30rem;
+    margin-right: 29rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid var(--footer);
+    padding-bottom: 2rem;
+}
+
+#produkt-img-vase {
+    width: 15%;
+    height: auto;
+    margin-left: 25rem;
+    margin-top: 3rem;
+    
+}
+
+.produkt-tekst3 {
+    margin-bottom: 10rem;
+    margin-top: 1rem;
+}
+
+.produkt-tekst3 p {
+    margin-left: 27rem;
+    margin-right: 0rem;
+    margin-bottom: -0.35rem;
+}
+
+.produkt-tekst3 p a {
+    color: var(--footer);
+}
+
+#produkt-img-blomster {
+    width: 15%;
+    height: auto;
+    margin-top: -25rem;
+    margin-left: 50rem;
+}
+
+
+.produkt-tekst4 {
+    margin-bottom: 5rem;
+}
+
+.produkt-tekst4 p {
+    margin-left: 52rem;
+    margin-bottom: -0.35rem;
+    margin-right: 0;
+}
+
+.produkt-tekst4 p a {
+    color: var(--footer);
+}
+
+.ingen {
+    color: var(--baggrund);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+#blomsterbillede {
+    width: 30rem;
+    margin-left: 30rem;
+    margin-top: -3rem;
+    border: 5px solid #f8f5f18a
+}
+
+#produkt-tekst5 {
+    margin-right: 30.5rem;
+    margin-bottom: 5rem;
+    margin-left: 30.5rem;
+    line-height: 1.5rem;
+}
+
+/*Selve produkt samt produktteksterne til pyntepuder*/
+
+#produkt-rundpude {
+    width: 15%;
+    height: auto;
+    margin-left: 25rem;
+    
+}
+
+#produkt-pude {
+    width: 10%;
+    height: auto;
+    margin-left: 50rem;
+    margin-top: -10rem;
+}
+
+.produkt-tekst6 {
+    margin-bottom: 10rem;
+    margin-top: 1rem;
+}
+
+.produkt-tekst6 p {
+    margin-left: 25rem;
+    margin-right: 0rem;
+    margin-bottom: -0.35rem;
+}
+
+.produkt-tekst6 p a {
+    color: var(--footer);
+}
+
+.produkt-tekst7 {
+    margin-bottom: 5rem;
+}
+
+.produkt-tekst7 p {
+    margin-left: 48rem;
+    margin-bottom: -0.35rem;
+    margin-right: 0;
+}
+
+.produkt-tekst7 p a {
+    color: var(--footer);
+}
+
+#haeklede-puder {
+    width: 20%;
+    height: auto;
+    margin-left: 25rem;
+    margin-top: 0.2rem;
+}
+
+#produkt-tekst8 {
+    margin-right: 45rem;
+    margin-left: 25rem;
+    margin-bottom: 5rem;
+}
+
+#opskrift {
+    margin-left: 25rem;
+    margin-top: -4.8rem;
+}
+
+#opskrift a {
+    color: var(--footer);
+}
+
+#sidstetekst {
+    margin-left: 25rem;
+    margin-right: 20rem;
+}
+
+/*Her ses min css redigering af footeren*/
+footer {
+    background-color: var(--footer);
+    border-top: 1.5px solid var(--overskrift);
+    display: flex;           
+    justify-content: space-between; 
+    align-items: center;     
+    padding: 0 20px;           
+    height: 6.25rem; 
+    margin-top: -5rem;
+}
+
+.logo {
+    width: 6.25rem; 
+    height: auto;
+}
+
+.instalogo {
+    width: 5rem;  
+    height: auto;
+    margin: 0 auto; 
+    margin-left: 65.6rem;
+}
+
+.fblogo {
+    width: 5.9rem; 
+    height: auto;
+    margin: 0; 
+    
+}
+
+.maillogo {
+    width: 5.9rem;
+    height: auto;
+}
